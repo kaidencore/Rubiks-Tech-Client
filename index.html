@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Rubik's</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="assets/styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="topline">
+            <div class="topline-left">
+                <div class="dropdown" id="dropdown">
+                    <button class="dropbtn"><i class="fas fa-globe"></i> Language <i
+                            class="fas fa-caret-down"></i></button>
+                    <div class="dropdown-content" id="dropdown-content">
+                        <a href="#">English</a>
+                        <a href="#">Spanish</a>
+                        <a href="#">Japanese</a>
+                        <a href="#">Korean</a>
+                    </div>
+                </div>
+                <button class="help-btn"><i class="fas fa-question-circle"></i> Help & Support</button>
+            </div>
+            <div class="topline-right">
+                <button class="sign-in-btn"><i class="fas fa-sign-in-alt"></i> Sign In</button>
+            </div>
+        </div>
+
+        <div class="top-row">
+            <div class="logo-container">
+                <a href="#">
+                    <img class="img-logo-emblem" src="assets/rubiks-emblem.png" alt="Company Logo">
+                    <img class="img-logo-text" src="assets/rubiks-text.png" alt="Company Name">
+                </a>
+            </div>
+            <div class="search-cart">
+                <input type="text" placeholder="Search...">
+                <button class="cart-btn"><i class="fas fa-shopping-cart"></i></button>
+            </div>
+        </div>
+
+        <div class="navbar">
+            <div class="navbar-left">
+                <div class="dropdown" id="categoriesDropdown">
+                    <button class="dropbtn">Categories <i class="fas fa-caret-down"></i></button>
+                    <div class="dropdown-content">
+                        <a href="#">Consoles</a>
+                        <a href="#">Games</a>
+                        <a href="#">Computers</a>
+                        <a href="#">Phones</a>
+                        <a href="#">Components</a>
+                        <a href="#">Photography</a>
+                    </div>
+                </div>
+                <div class="dropdown" id="brandsDropdown">
+                    <button class="dropbtn">Brands <i class="fas fa-caret-down"></i></button>
+                    <div class="dropdown-content">
+                        <a href="#">Razer</a>
+                        <a href="#">Logitech</a>
+                        <a href="#">Asus</a>
+                        <a href="#">Steelseries</a>
+                        <a href="#">Corsair</a>
+                        <a href="#">Mars</a>
+                        <a href="#">Sony</a>
+                        <a href="#">Nintendo</a>
+                        <a href="#">Xbox</a>
+                        <a href="#">MSI</a>
+                        <a href="#">Lenovo</a>
+                        <a href="#">Acer</a>
+                    </div>
+                </div>
+                <div class="dropdown" id="trendsDropdown">
+                    <button class="dropbtn">Trends <i class="fas fa-caret-down"></i></button>
+                    <div class="dropdown-content">
+                        <a href="#">New Game Releases</a>
+                        <a href="#">New Laptop Releases</a>
+                        <a href="#">New Console Releases</a>
+                        <a href="#">New Phone Releases</a>
+                        <a href="#">New Computer Releases</a>
+                    </div>
+                </div>
+            </div>
+            <div class="navbar-right">
+                <button class="hot-deals-btn">Hot Deals</button>
+            </div>
+        </div>
+
+        <div class="product-showcase">
+            <div class="ps-section">
+                <div class="top-selling-product">
+                    <img src="assets/top-selling.jpg" alt="Top Selling Product">
+                </div>
+            </div>
+            <div class="ps-section">
+                <div class="carousel-container">
+                    <div class="carousel">
+                        <div class="carousel-slide">
+                            <img src="assets/carousel-1.jpg" alt="Image 1">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="assets/carousel-2.jpg" alt="Image 2">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="assets/carousel-3.jpg" alt="Image 3">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="assets/carousel-4.jpg" alt="Image 4">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="assets/carousel-5.jpg" alt="Image 5">
+                        </div>
+                    </div>
+                    <button id="prevBtn">&#10094;</button>
+                    <button id="nextBtn">&#10095;</button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="shop-section">
+            <div class="shop-section-header">
+                <h2>This Week's Best Products</h2>
+                <div>
+                    <div id="productList" class="products-container"></div>
+                    <div id="productList" class="products-container"></div>
+                    <div class="pagination">
+                        <button id="prevButton" onclick="prevPage()">Previous</button>
+                        <div id="pageIndicator" class="page-indicator"></div>
+                        <button id="nextButton" onclick="nextPage()">Next</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="newsletter-section">
+            <div class="newsletter-description">
+                <p>Sign up for exclusive offers and news!</p>
+            </div>
+            <div class="newsletter-form">
+                <input type="email" placeholder="Your email address" id="emailInput">
+                <button type="submit">Subscribe</button>
+            </div>
+        </div>
+        <div class="links-section">
+            <div class="links">
+                <h3>CUSTOMER SERVICE</h3>
+                <ul>
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Track an Order</a></li>
+                    <li><a href="#">Return an Item</a></li>
+                    <li><a href="#">Return Policy</a></li>
+                    <li><a href="#">Privacy & Security</a></li>
+                    <li><a href="#">Feedback</a></li>
+                </ul>
+            </div>
+
+            <div class="links">
+                <h3>MY ACCOUNT</h3>
+                <ul>
+                    <li><a href="#">Login/Register</a></li>
+                    <li><a href="#">Browsing History</a></li>
+                    <li><a href="#">Order History</a></li>
+                    <li><a href="#">Returns History</a></li>
+                    <li><a href="#">Address Book</a></li>
+                    <li><a href="#">Wish Lists</a></li>
+                    <li><a href="#">My Build Lists</a></li>
+                    <li><a href="#">My Build Showcase</a></li>
+                    <li><a href="#">Email Notifications</a></li>
+                    <li><a href="#">Subscriptions Orders</a></li>
+                    <li><a href="#">Auto Notifications</a></li>
+                </ul>
+            </div>
+
+            <div class="links">
+                <h3>COMPANY INFORMATION</h3>
+                <ul>
+                    <li><a href="#">About Rubik's</a></li>
+                    <li><a href="#">Investor Relations</a></li>
+                    <li><a href="#">Rubik's Student Internship Program</a></li>
+                </ul>
+            </div>
+
+            <div class="links">
+                <h3>TOOLS & RESOURCES</h3>
+                <ul>
+                    <li><a href="#">Sell on Rubik's</a></li>
+                    <li><a href="#">For Your Business</a></li>
+                    <li><a href="#">Rubik's Partner Services</a></li>
+                </ul>
+            </div>
+
+            <div class="links">
+                <h3>SHOP OUR BRANDS</h3>
+                <ul>
+                    <li><a href="#">Rubik's Business</a></li>
+                    <li><a href="#">Rubik's Global</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="end-section">
+            © 2023-2023 Rubik's Inc. All rights reserved.
+        </div>
+    </footer>
+    <script src="script/carousel.js"></script>
+    <script src="script/dropdownButton.js"></script>
+    <script src="script/view.js"></script>
+</body>
+
+</html>
